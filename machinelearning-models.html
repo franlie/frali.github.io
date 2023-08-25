@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Machine Learning Models</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">← Home</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="stockscreener.html">Stock Screener</a></li>
+							<li><a href="property-dashboard.html">Porperty Dashboard</a></li>
+							<li><a href="correlation-analysis.html">Correlation Analysis</a></li>
+							<li><a href="tennis.html">Data Exploration - ATP Tennis</a></li>
+							<li><a href="prediction.html">Stock Price Prediction</a></li>
+							<li><a href="machinelearning-models.html">Machine Learning Models</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>A brief overview of Machine Learning Models</h1>
+							<span class="image main"><a href=""><img src="images/ml.png" alt="" /></a></span>
+							<p>Machine Learning Models can be categorized as <u>Supervised</u> and <u>Unsupervised</u> Learning</p>
+							<h3><u>1. Supervised Learning</u></h3>
+							<p>Supervised learning involves a series of functions that map an input to an output based on a series of example input-output pairs.<br />
+							For Example:</p>
+							<p><table style="width:40%;">
+								<thead>
+									<tr>
+										<th>Age (input)</th>
+										<th>Shoe size(output)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>5</td>
+										<td>8</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>8,5</td>
+									</tr>
+									<tr>
+										<td>12</td>
+										<td>9,5</td>
+									</tr>
+								</tbody>
+								</table></p>
+							<p>We now could implement a supervised learning model to predict the shoe size of a person based on their age. Further with supervised learning there are two sub categories. One is <b>Regression</b> and the other is <b>Classification</b>.</p>
+							<h4>1.1 Regression Models</h4>
+							<p>In Regression Models we find a target value based on independent predictors. That means you can use this to find relationships between a dependent variable and an independent variable. In regression models the output is continuous.
+							Some of the most common types of regression models include:
+							<p><h4>1.1.1 Linear Regression</h5></p>
+							<p><table>
+								<tr>
+									<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/290px-Linear_regression.svg.png" /></td>
+									<td style="vertical-align:middle;">Finding a line that fits the data. Its extensions include <b>Multiple Linear Regression</b> which is finding a plane of best fit and <b>Polynomial regression</b> that is finding a curve for best fit.</td>
+								</tr>
+								<tr>
+									<td colspan="2" style="text-align:left;"><i>Python Packages</i><br /><pre><code>pip install numpy scikit-learn statsmodels<br />&nbsp;<br />import numpy as np<br />from sklearn.linear_model import LinearRegression<br />from sklearn.preprocessing import PolynomialFeatures<br />&nbsp;<br /># Advanced Linear Regression <br/>import statsmodels.api as sm</code></pre>
+									</td>
+								</tr>
+							</table></p>
+							<p><h4>1.1.2 Decision Trees</h5></p>
+								<p><table>
+									<tr>
+										<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Information_Gain_Tree.jpg/500px-Information_Gain_Tree.jpg" /></td>
+										<td style="vertical-align:middle;">A decision tree is a flowchart-like structure in which each internal node represents a "test" on an attribute (e.g. whether a coin flip comes up heads or tails), each branch represents the outcome of the test, and each leaf node represents a class label (decision taken after computing all attributes). The paths from root (M4) to leaf represent classification rules.</td>
+									</tr>
+									<tr>
+										<td colspan="2" style="text-align:left;"><i>Python Packages</i><br /><pre><code>from sklearn import tree<br />from sklearn.tree import DecisionTreeClassifier</code></pre>
+										</td>
+									</tr>
+								</table></p>
+							<p><h4>1.1.3 Random Forests</h5></p>
+								<p><table>
+									<tr>
+										<td><img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Random_forest_diagram_complete.png" /></td>
+										<td style="vertical-align:middle;">An <b>Ensemble learning technique</b> that builds off over decision trees and involves creating multiple decision trees using bootstrap data sets of original	data and randomly selecting a subset of	variables at each step of the decisiontree. The model then selects the mode of all the predictions of each decision	trees and by relying on the <b>"Majority wins"</b> model it reduces the risk of error of each individual tree.</td>
+									</tr>
+									<tr>
+										<td colspan="2" style="text-align:left;"><i>Python Packages</i><br /><pre><code>from sklearn.ensemble import RandomForestRegressor</code></pre></td>
+									</tr>
+								</table></p>
+								<p><h4>1.1.4 Neural Network</h5></p>
+									<p><table>
+										<tr>
+											<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Neural_network_example.svg/220px-Neural_network_example.svg.png" /></td>
+											<td style="vertical-align:middle;">A quite popular multi layered model inspired by human minds.	Like the neurons in our brain the circle represents a node the green circle	represents an input layer the blue circle represents a hidden layer and the	pink circle represent an output layer.Each node in the hidden layer represents a function where input goes through ultimately leading to the output in the pink circle
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2" style="text-align:left;"><i>Python Packages (Example with Keras and Tensorflow)</i><br /><pre><code>import tensorflow as tf<br />from tensorflow.keras.models import Model<br />from tensorflow.keras.utils import plot_model</code></pre>
+											</td>
+										</tr>
+									</table></p>
+							<h4>1.2 Classification</h4>
+							<p>In classification the output is descrete and not continuous as in Regressen Models. Some of the most common types of regression models include:
+								<p><h4>1.2.1 Logistic Regression</h5></p>
+									<p><table>
+										<tr>
+											<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Exam_pass_logistic_curve.svg/400px-Exam_pass_logistic_curve.svg.png" /></td>
+											<td style="vertical-align:middle;"><b>Logistic regression</b> is similar to linear regression but it is used to model the probability of a finite number of outcomes which is typically two (is probably happening/is probably not happening). The output values can only be between 0 and 1.
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2" style="text-align:left;"><i>Python Packages</i><br /><pre><code>from sklearn.linear_model import LogisticRegression</code></pre>
+											</td>
+										</tr>
+									</table></p>
+								<p><h4>1.2.2 Support Vector Machine SVM</h5></p>
+									<p><table>
+										<tr>
+											<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Svm_separating_hyperplanes_%28SVG%29.svg/220px-Svm_separating_hyperplanes_%28SVG%29.svg.png" /></td>
+											<td style="vertical-align:middle;">A supervised classification technique that carries an objective to find a hyperplane in n-dimensional space that can distinctly classify the data points.
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2" style="text-align:left;"><i>Python Packages</i><br /><pre><code>from sklearn import svm
+											</code></pre>
+											</td>
+										</tr>
+									</table></p>
+								<p><h4>1.2.3 Naive Bayes</h5></p>
+									<p><table>
+										<tr>
+											<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Naive_corral.png/220px-Naive_corral.png" /></td>
+											<td style="vertical-align:middle;">Naive Bayes is a classifier which acts as a probabilistic machine learning model used for classification tasks. The crux of the classifier is based on the <b>Bayes Theorem</b>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2" style="text-align:left;"><i>Python Packages</i><br /><pre><code>from sklearn import svm
+											</code></pre>
+											</td>
+										</tr>
+									</table></p>
+									<p><h4>1.2.4 Decision Tree, Random Forrest, Neural Network</h5></p>
+										<p>All these models follow the same logic as previously explained. The only difference here is that the output is discrete rather than continuous</p>
+								<h3><u>2. Unsupervised Learning</u></h3>
+								<p>Unlike supervised learning, unsupervised learning is used to draw inferences and find patterns from input data without references to the labeled outcome. Two main methods used in supervised learning include <b>Clustering</b> and <b>Dimensionality reduction</b></p>
+								<p><h4>2.1 Clustering</h5></p>
+									<p><table>
+										<tr>
+											<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/SLINK-Gaussian-data.svg/186px-SLINK-Gaussian-data.svg.png" /></td>
+											<td style="vertical-align:middle;">Clustering involves grouping of data points. It's frequently used for customer segmentation, fraud detection and document classification. Common clustering techniques include <b>K-means</b>, <b>Hierarchical Clustering</b>, <b>Mean Shift</b> and <b>Density-based</b> clustering. While each technique has different methods in finding clusters, they all aim to achieve the same thing.</td>
+										</tr>
+										<tr>
+											<td colspan="2" style="text-align:left;"><i>Python Packages</i><br /><pre><code>from sklearn.clusters import KMeans<br />from scipy.cluster.hierarchy import dendrogram, linkage<br />from sklearn.cluster import MeanShift<br />from sklearn.cluster import DBSCAN
+											</code></pre>
+											</td>
+										</tr>
+									</table></p>
+									<p><h4>2.2 Dimensionality Reduction</h5></p>
+										<p><table>
+											<tr>
+												<td><img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Dimensionality-reduction.jpg?20201206233501" /></td>
+												<td style="vertical-align:middle;">A process of reducing dimensions of your feature set or simply: reducing the number of features. Most dimensionality reduction techniques can be categorized as either <b>Feature Elimination</b> or <b>Feature Extraction</b>. A popular method of dimensionality reduction is called <b>Principal Component Analysis</b> or <b>PCA</b>.
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2" style="text-align:left;"><i>Python Packages</i><br /><pre><code>from sklearn.decomposition import PCA
+												</code></pre>
+												</td>
+											</tr>
+										</table></p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<!-- <section>
+							<h2>Get in touch</h2>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field half">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Message"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send" class="primary" /></li>
+								</ul>
+							</form>
+						</section> -->
+						<section>
+							<h2>Contact</h2>
+							<ul class="icons">
+								<li><a href="https://www.linkedin.com/in/frank-liebhart" class="icon brands style2 fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/franlie" class="icon brands style2 fa-github"><span class="label" target="_blank">GitHub</span></a></li>
+								<li><a href="mailto:frank.liebhart@gmx.net" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+						</section>
+						<ul class="copyright">
+							<li>&copy; Frank Liebhart</li>
+						</ul>
+					</div>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
