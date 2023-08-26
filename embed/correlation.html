@@ -2880,6 +2880,7 @@ input::placeholder {
   text-align: left;
   -moz-appearance: none;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 .jp-HTMLSelect.jp-DefaultStyle select:disabled {
@@ -5936,7 +5937,7 @@ Note: input and output wrappers have "display: block" propery in print mode.
   margin: 0;
 
   /* Added to reveal the box-shadow on the input and output collapsers. */
-  overflow: visible;
+  overflow: auto !important;
 }
 
 /* Only input/output areas inside cells */
@@ -6407,7 +6408,7 @@ cell outputs.
 }
 
 .jp-Notebook .jp-Cell {
-  overflow: visible;
+  overflow: auto;
 }
 
 .jp-Notebook .jp-Cell .jp-InputPrompt {
@@ -7237,6 +7238,7 @@ all of MD as it is not optimized for dense, information rich UIs.
 /* Force rendering true colors when outputing to pdf */
 * {
   -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 /* Misc */
@@ -7246,7 +7248,7 @@ a.anchor-link {
 
 /* Input area styling */
 .jp-InputArea {
-  overflow: hidden;
+  overflow: auto !important;
 }
 
 .jp-InputArea-editor {
