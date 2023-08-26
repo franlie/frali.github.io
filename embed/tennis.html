@@ -5303,14 +5303,14 @@ h6:hover .jp-InternalAnchorLink {
 |----------------------------------------------------------------------------*/
 
 .jp-OutputArea {
-  overflow-y: auto;
+  overflow: auto !important;
 }
 
 .jp-OutputArea-child {
   display: table;
   table-layout: fixed;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .jp-OutputPrompt {
@@ -5781,7 +5781,7 @@ Note: input and output wrappers have "display: block" propery in print mode.
   display: table;
   table-layout: fixed;
   width: 100%;
-  overflow: hidden;
+  overflow:  auto !important;
 }
 
 .jp-InputArea-editor {
@@ -5937,7 +5937,7 @@ Note: input and output wrappers have "display: block" propery in print mode.
   margin: 0;
 
   /* Added to reveal the box-shadow on the input and output collapsers. */
-  overflow: auto;
+  overflow: auto !important;
 }
 
 /* Only input/output areas inside cells */
@@ -6409,7 +6409,6 @@ cell outputs.
 
 .jp-Notebook .jp-Cell {
   overflow: auto !important;
-  overflow-x: auto !important;
 
 }
 

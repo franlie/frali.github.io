@@ -2880,6 +2880,7 @@ input::placeholder {
   text-align: left;
   -moz-appearance: none;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 .jp-HTMLSelect.jp-DefaultStyle select:disabled {
@@ -5302,14 +5303,14 @@ h6:hover .jp-InternalAnchorLink {
 |----------------------------------------------------------------------------*/
 
 .jp-OutputArea {
-  overflow-y: auto;
+  overflow: auto !important;
 }
 
 .jp-OutputArea-child {
   display: table;
   table-layout: fixed;
   width: 100%;
-  overflow: hidden;
+  overflow: auto !important;
 }
 
 .jp-OutputPrompt {
@@ -5326,7 +5327,7 @@ h6:hover .jp-InternalAnchorLink {
   /* Right align prompt text, don't wrap to handle large prompt numbers */
   text-align: right;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: auto !important;
   text-overflow: ellipsis;
 
   /* Disable text selection */
@@ -5345,7 +5346,7 @@ h6:hover .jp-InternalAnchorLink {
   display: table-cell;
   width: 100%;
   height: auto;
-  overflow: auto;
+  overflow: auto !important;
   user-select: text;
   -moz-user-select: text;
   -webkit-user-select: text;
@@ -5936,7 +5937,7 @@ Note: input and output wrappers have "display: block" propery in print mode.
   margin: 0;
 
   /* Added to reveal the box-shadow on the input and output collapsers. */
-  overflow: visible;
+  overflow: auto !important;
 }
 
 /* Only input/output areas inside cells */
@@ -6392,7 +6393,7 @@ cell outputs.
 .jp-Notebook {
   padding: var(--jp-notebook-padding);
   outline: none;
-  overflow: auto;
+  overflow: auto !important;
   background: var(--jp-layout-color0);
 }
 
@@ -6407,7 +6408,7 @@ cell outputs.
 }
 
 .jp-Notebook .jp-Cell {
-  overflow: visible;
+  overflow: auto !important;
 }
 
 .jp-Notebook .jp-Cell .jp-InputPrompt {
@@ -7237,6 +7238,7 @@ all of MD as it is not optimized for dense, information rich UIs.
 /* Force rendering true colors when outputing to pdf */
 * {
   -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 /* Misc */
@@ -7246,11 +7248,11 @@ a.anchor-link {
 
 /* Input area styling */
 .jp-InputArea {
-  overflow: hidden;
+  overflow: auto !important;
 }
 
 .jp-InputArea-editor {
-  overflow: hidden;
+  overflow: auto !important;
 }
 
 .cm-editor.cm-s-jupyter .highlight pre {
