@@ -12,6 +12,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
+
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -54,7 +56,7 @@
 						<div class="inner">
 							<h1>Data Exploration - ATP Tennis</h1>
 							<span class="image main"><img src="images/jupyter-python.png" alt="" /></span>
-							<p><code>SQL</code>&nbsp;<code>JupyterNB</code></p>
+							<p><code><b>SQL | JupyterNB</b></code></p>
 							<p>Base for the analysis was a csv from <a href="https://www.kaggle.com/datasets/dissfya/atp-tennis-2000-2023daily-pull" target=""_blank>kaggle.com</a> with more than 60k ATP matches ranging from 2000 until 2023. I created a SQLite database and imported the csv. All the querying then was done in SQL on Jupyter Notebook for better visualization.</p>
 							<p>The following questions were asked and answered:
 								<ul>
@@ -67,7 +69,7 @@
 									<li>How many duels were fought between Rafael Nadal and Roger Federer and who won?<ul><li>Whats the head to head statistic between them?</li></ul></li>
 								</ul>
 							</p>
-							<p><iframe src="embed/tennis.html" style="width: 100%; height:9500px;" frameborder="0" scrolling="no"></iframe></p>
+							<p><iframe src="embed/tennis.html" style="width: 100%;" frameborder="0" scrolling="no" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'></iframe></p>
 							<p><a href="https://github.com/franlie/ATP-Tennis-EDA.git" target="_blank" style="text-decoration:none;">→ Github</a></p>
 						</div>
 					</div>
